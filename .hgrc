@@ -1,0 +1,17 @@
+[ui]
+username = tim-saki <tim-saki>
+
+[pager]
+pager = LESS='FRX' less
+
+[extensions]
+graphlog =
+pager =
+color =
+
+[defaults]
+glog = --template 'cset: {rev}: {node|short} {tags}\nsum:  {desc|firstline|fill68|tabindent|tabindent}\n\n'
+
+[alias]
+l = log
+nudge = push --rev .
