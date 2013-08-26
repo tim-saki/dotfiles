@@ -30,3 +30,9 @@ setopt pushd_ignore_dups
 
 ## function
 function chpwd(){ls}
+
+## history
+setopt extended_history
+HISTSIZE=100000
+HISTFILE=~/.histfile
+SAVEHIST=100000
