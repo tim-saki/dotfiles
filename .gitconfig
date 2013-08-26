@@ -8,5 +8,6 @@
 	cm = commit
 	cmm = commit -m
 	df = diff
+	dfc = diff --cached
 	l = log
 	gl = log --graph
