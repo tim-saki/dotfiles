@@ -10,6 +10,7 @@ alias x=exit
 alias t=tmux
 alias tls='tmux list-sessions'
 # ls
+alias ls='ls --color -F'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
