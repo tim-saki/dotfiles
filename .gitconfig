@@ -3,3 +3,10 @@
 	email = tim-saki
 [color]
 	ui = true
+[alias]
+	s = status
+	cm = commit
+	cmm = commit -m
+	df = diff
+	l = log
+	gl = log --graph
