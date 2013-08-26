@@ -22,3 +22,8 @@ alias -g G='| grep'
 ## compinit
 autoload -Uz compinit
 compinit
+
+## cd
+setopt auto_cd
+setopt auto_pushd
+setopt pushd_ignore_dups
