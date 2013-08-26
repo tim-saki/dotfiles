@@ -21,3 +21,8 @@ alias lla='ls -la'
 # git completion
 source /etc/bash_completion.d/git
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+# mercurial
+hg_branch() {
+    hg branch 2> /dev/null | awk '{print "(hg:" $1 ")"}'
+}
