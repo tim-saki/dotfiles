@@ -17,3 +17,7 @@ alias ls='ls -F --color'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
+
+# git completion
+source /etc/bash_completion.d/git
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
