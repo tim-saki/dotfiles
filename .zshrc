@@ -1,6 +1,7 @@
 export LANG=en_US.UTF-8
 
-
+## PATH
+PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ## alias
