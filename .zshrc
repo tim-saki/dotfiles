@@ -9,6 +9,9 @@ alias g=git
 alias h=hg
 alias e=emacs
 alias x=exit
+alias wh=which
+alias du='du -h'
+alias df='df -h'
 # tmux
 alias t=tmux
 alias tls='tmux list-sessions'
