@@ -8,9 +8,11 @@ pager = LESS='FRX' less
 graphlog =
 pager =
 color =
+rebase =
+mq =
 
 [defaults]
-glog = --template 'cset: {rev}: {node|short} {tags}\nsum:  {desc|firstline|fill68|tabindent|tabindent}\n\n'
+glog = --style=compact
 
 [alias]
 l = log
