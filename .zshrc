@@ -1,3 +1,4 @@
+## ENV
 export LANG=en_US.UTF-8
 
 ## PATH
@@ -43,3 +44,8 @@ setopt extended_history
 HISTSIZE=100000
 HISTFILE=~/.histfile
 SAVEHIST=100000
+
+## PROMPT
+# autoload -U colors
+# colors
+PROMPT='%n@%m %~ $ '
