@@ -38,9 +38,13 @@ setopt pushd_ignore_dups
 
 ## function
 function chpwd(){ls}
+function history-all { history -E 1 }
 
 ## history
+setopt bang_hist
 setopt extended_history
+setopt share_history
+setopt inc_append_history
 HISTSIZE=100000
 HISTFILE=~/.histfile
 SAVEHIST=100000
