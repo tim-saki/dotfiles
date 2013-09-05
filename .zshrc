@@ -3,13 +3,17 @@ export LANG=en_US.UTF-8
 
 ## PATH
 PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+## dircolors
+eval `dircolors ~/.dircolors`
 
 ## alias
 alias g=git
 alias h=hg
 alias e=emacs
 alias x=exit
+alias s=ssh
+alias v=vim
 alias wh=which
 alias du='du -h'
 alias df='df -h'
@@ -53,3 +57,5 @@ SAVEHIST=100000
 # autoload -U colors
 # colors
 PROMPT='%n@%m %~ $ '
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
