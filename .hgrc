@@ -1,5 +1,5 @@
 [ui]
-username = tim-saki <tim-saki>
+username = tim-saki <saki@tim>
 
 [pager]
 pager = LESS='FRX' less
@@ -10,10 +10,17 @@ pager =
 color =
 rebase =
 mq =
+purge =
 
-[defaults]
-glog = --style=compact
+[color]
+mode = auto
 
 [alias]
 l = log
 nudge = push --rev .
+gl = glog
+qls = qseries --summary
+df = diff
+s = status
+cm = commit -m
+show = log --color=always -pr
