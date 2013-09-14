@@ -8,6 +8,9 @@ if [ -s $(brew --prefix coreutils) ]; then
     MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
+## rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 ## dircolors
 eval `dircolors ~/.dircolors`
 
