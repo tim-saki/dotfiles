@@ -3,6 +3,10 @@ export LANG=en_US.UTF-8
 
 ## PATH
 PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
+if [ -s $(brew --prefix coreutils) ]; then
+    PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+fi
 
 ## dircolors
 eval `dircolors ~/.dircolors`
