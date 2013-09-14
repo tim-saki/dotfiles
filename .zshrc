@@ -8,6 +8,14 @@ if [ -s $(brew --prefix coreutils) ]; then
     MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
+case ${OSTYPE} in
+    darwin*)
+	alias here='open .'
+        ;;
+    linux*)
+        ;;
+esac
+
 ## rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
