@@ -13,6 +13,10 @@ case ${OSTYPE} in
 	fi
         ;;
     linux*)
+	if which source-highlight > /dev/null 2>&1; then
+	    export LESS='-R'
+	    export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
+	fi
         ;;
 esac
 
