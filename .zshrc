@@ -74,8 +74,15 @@ HISTFILE=~/.histfile
 SAVEHIST=100000
 
 ## PROMPT
-# autoload -U colors
-# colors
+autoload -Uz colors && colors
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:*' formats "%F{blue}%b %F{red}%u%F{yellow}%c %{$reset_color%}%%"
+zstyle ':vcs_info:*' actionformats "%b %a %u%c "
+precmd(){ vcs_info }
 PROMPT='%n@%m %~ $ '
+PROMPT=$PROMPT'${vcs_info_msg_0_}'
+# PROMPT='%n@%m %~ $ '
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
