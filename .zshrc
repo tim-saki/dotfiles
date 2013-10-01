@@ -78,6 +78,8 @@ autoload -Uz colors && colors
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr '!'
+zstyle ':vcs_info:*' unstagedstr '+'
 zstyle ':vcs_info:*' actionformats \
     '%f%F{4}%s %F{2}%b %F{1}%u%F{3}%c%F{3}|%F{1}%a%f '
 zstyle ':vcs_info:*' formats       \
