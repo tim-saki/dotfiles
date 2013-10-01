@@ -77,12 +77,13 @@ SAVEHIST=100000
 autoload -Uz colors && colors
 autoload -Uz vcs_info
 setopt prompt_subst
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:*' formats "%F{blue}%b %F{red}%u %F{yellow}%c%{$reset_color%}"
-zstyle ':vcs_info:*' actionformats "%F{blue}%b %F{red}%u %F{yellow}%c%{$reset_color%}"
-precmd(){ vcs_info }
-PROMPT='%n@%m %~ $ '
-PROMPT=$PROMPT'${vcs_info_msg_0_}'
-# PROMPT='%n@%m %~ $ '
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' actionformats \
+    '%f%F{4}%s %F{2}%b %F{1}%u%F{3}%c%F{3}|%F{1}%a%f '
+zstyle ':vcs_info:*' formats       \
+    '%f%F{4}%s %F{2}%b %F{1}%u%F{3}%c%f '
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+precmd () { vcs_info }
+PS1='%F{0}%m %F{0}%3~ ${vcs_info_msg_0_}%f%# '
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
