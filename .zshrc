@@ -54,6 +54,7 @@ alias -g G='| grep'
 ## compinit
 autoload -Uz compinit
 compinit
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 ## cd
 setopt auto_cd
