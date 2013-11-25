@@ -3,7 +3,7 @@ username = tim-saki <saki@tim>
 
 [pager]
 pager = LESS='FRX' less
-attend = show, log, glog, diff
+attend = show, log, glog, diff, gls, gla
 
 [extensions]
 graphlog =
@@ -12,6 +12,9 @@ color =
 rebase =
 mq =
 purge =
+
+[mq]
+secret = True
 
 [color]
 mode = auto
@@ -25,3 +28,5 @@ df = diff
 s = status
 cm = commit -m
 show = log --color=always -pr
+gls = glog --template '\033[31m{rev}:{node|short}\033[m | {date|shortdate} | {author|user}: {desc|strip|firstline}\n\033[36m{branches}\033[m\n'
+gla = glog --stat --template '\033[31m{rev}:{node|short}\033[m | {date|shortdate} | {author|user}: {desc|strip|firstline}\n\033[36m{branches}\033[m\n'
