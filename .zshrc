@@ -28,6 +28,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 eval `dircolors ~/.dircolors`
 
 ## alias
+alias b=brew
 alias g=git
 alias h=hg
 alias e=emacs
