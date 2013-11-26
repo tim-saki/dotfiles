@@ -11,3 +11,5 @@
 	dfc = diff --cached
 	l = log
 	gl = log --graph
+[push]
+	default = simple
