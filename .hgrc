@@ -3,7 +3,7 @@ username = tim-saki <saki@tim>
 
 [pager]
 pager = LESS='FRX' less
-attend = show, log, glog, diff, gls, gla
+attend = show, log, glog, diff, gls, gla, qdiff
 
 [extensions]
 graphlog =
