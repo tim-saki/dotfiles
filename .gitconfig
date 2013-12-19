@@ -13,3 +13,5 @@
 	gl = log --graph
 [push]
 	default = simple
+[include]
+	path = .gitconfig.local
