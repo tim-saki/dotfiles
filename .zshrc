@@ -3,7 +3,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 ## PATH
-PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
+PATH=/usr/local/bin:$PATH
 
 case ${OSTYPE} in
     darwin*)
