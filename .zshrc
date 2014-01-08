@@ -76,7 +76,8 @@ HISTFILE=~/.histfile
 SAVEHIST=100000
 
 ## PROMPT
-CIRCLE_PREFIX='●'
+PROMPT_PREFIX='⚡️ '
+
 autoload -Uz colors && colors
 autoload -Uz vcs_info
 setopt prompt_subst
@@ -89,6 +90,6 @@ zstyle ':vcs_info:*' formats       \
     '%f%F{4}%s %F{2}%b %F{1}%u%F{3}%c%f '
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 precmd () { vcs_info }
-PS1='$CIRCLE_PREFIX %F{0}%m %F{0}%3~ ${vcs_info_msg_0_}%f%# '
+PS1='$PROMPT_PREFIX %F{0}%m %F{0}%3~ ${vcs_info_msg_0_}%f%# '
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
