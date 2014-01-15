@@ -7,7 +7,13 @@ PATH=/usr/local/bin:$PATH
 
 case ${OSTYPE} in
     darwin*)
+	## usuful
 	alias here='open .'
+	## browser
+	alias chrome='open -a google\ chrome'
+	alias firefox='open -a firefox'
+	alias safari='open -a safari'
+	## coreutils
 	if [ -s $(brew --prefix coreutils) ]; then
 	    PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 	    MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
@@ -23,6 +29,9 @@ esac
 
 ## rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+## pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 ## dircolors
 eval `dircolors ~/.dircolors`
@@ -76,7 +85,7 @@ HISTFILE=~/.histfile
 SAVEHIST=100000
 
 ## PROMPT
-PROMPT_PREFIX='⚡️ '
+PROMPT_PREFIX='>'
 
 autoload -Uz colors && colors
 autoload -Uz vcs_info
