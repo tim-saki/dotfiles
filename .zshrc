@@ -74,6 +74,7 @@ setopt pushd_ignore_dups
 ## function
 function chpwd(){ls}
 function history-all { history -E 1 }
+alias hag='history-all | grep '
 
 ## history
 setopt bang_hist
