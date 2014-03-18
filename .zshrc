@@ -7,23 +7,26 @@ PATH=/usr/local/bin:$PATH
 
 case ${OSTYPE} in
     darwin*)
-	## usuful
-	alias here='open .'
-	## browser
-	alias chrome='open -a google\ chrome'
-	alias firefox='open -a firefox'
-	alias safari='open -a safari'
-	## coreutils
-	if [ -s $(brew --prefix coreutils) ]; then
-	    PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-	    MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-	fi
+        ## usuful
+        alias here='open .'
+        ## browser
+        alias chrome='open -a google\ chrome'
+        alias firefox='open -a firefox'
+        alias safari='open -a safari'
+        ## coreutils
+        if [ -s $(brew --prefix coreutils) ]; then
+            PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+            MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+        fi
+        ## src-hilite
+        export LESS='-R'
+        export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
         ;;
     linux*)
-	if which source-highlight > /dev/null 2>&1; then
-	    export LESS='-R'
-	    export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
-	fi
+        if which source-highlight > /dev/null 2>&1; then
+            export LESS='-R'
+            export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
+        fi
         ;;
 esac
 
@@ -62,6 +65,7 @@ alias -g T='| tail'
 alias -g G='| grep'
 # the others
 alias rlgosh='rlwrap gosh'
+alias vag='vagrant'
 
 ## compinit
 autoload -Uz compinit
