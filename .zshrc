@@ -37,7 +37,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 ## dircolors
-eval `dircolors ~/.dircolors`
+# eval `dircolors ~/.dircolors`
 
 ## alias
 alias b=brew
@@ -47,13 +47,16 @@ alias e=emacs
 alias x=exit
 alias s=ssh
 alias v=vim
+alias o=open
 alias wh=which
 alias du='du -h'
 alias df='df -h'
+alias so=source
 # tmux
 alias t=tmux
 alias tls='tmux list-sessions'
 # ls
+alias l='ls -la'
 alias ls='ls --color -F'
 alias ll='ls -l'
 alias la='ls -a'
@@ -93,7 +96,7 @@ SAVEHIST=100000
 
 ## PROMPT
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' enable git hg
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr '!'
 zstyle ':vcs_info:*' unstagedstr '+'
