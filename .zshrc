@@ -30,6 +30,9 @@ case ${OSTYPE} in
         ;;
 esac
 
+## enable C-s
+stty stop undef
+
 ## rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
