@@ -55,6 +55,7 @@ alias wh=which
 alias du='du -h'
 alias df='df -h'
 alias so=source
+alias be='bundle exec'
 # tmux
 alias t=tmux
 alias tls='tmux list-sessions'
