@@ -102,7 +102,7 @@ SAVEHIST=100000
 ## PROMPT
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git hg svn
-zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr '!'
 zstyle ':vcs_info:*' unstagedstr '+'
 zstyle ':vcs_info:*' actionformats \
