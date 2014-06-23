@@ -47,6 +47,7 @@ alias b=brew
 alias g=git
 alias h=hg
 alias e=emacs
+alias em=emacs
 alias x=exit
 alias s=ssh
 alias v=vim
