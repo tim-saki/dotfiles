@@ -27,6 +27,11 @@ case ${OSTYPE} in
             export LESS='-R'
             export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
         fi
+        if which brew > /dev/null 2>&1; then
+            export PATH="$HOME/.linuxbrew/bin:$PATH"
+            export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+            export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+        fi
         ;;
 esac
 
