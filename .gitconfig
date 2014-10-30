@@ -5,12 +5,21 @@
 	ui = true
 [alias]
 	s = status
+	ss = status --short --branch
 	cm = commit
 	cmm = commit -m
 	df = diff
 	dfc = diff --cached
 	l = log
-	gl = log --graph
+	ll = log --graph --decorate --oneline
+	lll = log --pretty=format:"%h%x09%an%x09%ad%x09%s" --date=short
+	llll = log --pretty=format:'%h %ad %ae: %s' --date=short
+	lg = log --graph
+	lp = log -p
+	lps = log -p --stat
+	pl = pull
+	br = branch
+	bra = branch -a
 [push]
 	default = simple
 [include]
