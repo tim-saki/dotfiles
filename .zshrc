@@ -47,10 +47,12 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 ## alias
 alias b=brew
+alias d=docker
 alias g=git
 alias h=hg
 alias e=emacs
 alias em=emacs
+alias ec=emacsclient
 alias x=exit
 alias s=ssh
 alias v=vim
@@ -62,6 +64,7 @@ alias so=source
 alias be='bundle exec'
 # tmux
 alias t=tmux
+alias tm=tmux
 alias tls='tmux list-sessions'
 # ls
 alias l='ls -la'
