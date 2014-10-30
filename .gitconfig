@@ -12,8 +12,8 @@
 	dfc = diff --cached
 	l = log
 	ll = log --graph --decorate --oneline
-	lll = log --pretty=format:"%h%x09%an%x09%ad%x09%s" --date=short
-	llll = log --pretty=format:'%h %ad %ae: %s' --date=short
+        lls = log --graph --decorate --oneline --name-status
+        lll = log --pretty=format:'%h %ad %an: %s' --date=short --graph
 	lg = log --graph
 	lp = log -p
 	lps = log -p --stat
