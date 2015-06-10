@@ -6,8 +6,10 @@
 [alias]
 	s = status
 	ss = status --short --branch
-	cm = commit
-	cmm = commit -m
+	sh = show
+	ci = commit
+	cim = commit -m
+	co = checkout
 	df = diff
 	dfc = diff --cached
 	l = log
