@@ -22,7 +22,7 @@ case ${OSTYPE} in
         export LESS='-R'
         export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
         ## leave contents
-        export LESS=eFRX
+        export LESS='-RX'
         ;;
     linux*)
         if which source-highlight > /dev/null 2>&1; then
